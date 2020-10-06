@@ -1,5 +1,7 @@
 package com.marina.tasks;
 
+import org.w3c.dom.ls.LSOutput;
+
 import java.util.Scanner;
 
 public class Exercise9 {
@@ -35,4 +37,5 @@ public class Exercise9 {
         System.out.println("");
     }
 }*/
+
     }
