@@ -44,6 +44,23 @@ public class Banknote {
         this.twenty +=twenty;
         this.fifty += fifty;
         this.oneHundred +=oneHundred;
-
     }
+
+    public boolean withdrawMoney(int twenty, int fifty, int oneHundred){
+        int nowInAtm = makeSum();
+        int withdraw = nowInAtm - ((twenty*20)+(fifty*50)+(oneHundred*100));
+        boolean result;
+        if(this.twenty >= twenty && this.fifty>= fifty && this.oneHundred>=oneHundred){
+            result= true;
+            this.twenty -= twenty;
+            this.fifty -=fifty;
+            this.oneHundred -=oneHundred;
+            System.out.println(this.twenty + "\t" + this.fifty + "\t" + this.oneHundred);
+        }else{
+            result= false;
+        }
+
+        return result;
+    }
+
 }
