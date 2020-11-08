@@ -10,7 +10,12 @@ public class Human implements Cloneable {
         return age;
     }
 
-    public void setAge(int age) {
+    public void setAge(int age) throws Exception {
+        if(age<0){
+            throw new Exception("Age is less than 0");
+        }
+
+
         this.age = age;
     }
 
